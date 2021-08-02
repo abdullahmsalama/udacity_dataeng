@@ -11,7 +11,8 @@ dl.cfg: a file containing the necessary AWS access and secretkey needed to acces
 etl.py: as the name suggests, responsible for extracting the data from S3, processing and transforing the data using Spark and loading them to another bucket in S3.
 
 - data
-	contains the data represented in song-data.zip and log-data.zip. The data on this repo is empty as the original data is huge!
+
+	This folder contains the data represented in song-data.zip and log-data.zip. The data on this repo is empty as the original data is huge!
 
 
 ### Run steps
