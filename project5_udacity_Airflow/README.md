@@ -27,7 +27,7 @@ Please read "add_airflow_connections" before proceeding to sucessfully add airfl
 		- "load_fact.py": Loads and insert data to the designated fact table
 		- "data_quality.py": Runs check on the data to ensure adequate data quality.
 
--## The Schema
+## The Schema
 
 The schema chosen is star schema, it consists of 1 fact table and 4 dimension tables, but first we copy the data to two staging tables called staging_events and staging_songs for staging the log files and song files seperately.
 
