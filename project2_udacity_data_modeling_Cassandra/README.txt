@@ -1,0 +1,5 @@
+## A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analysis team is particularly interested in understanding what songs users are listening to. Currently, there is no easy way to query the data to generate the results, since the data reside in a directory of CSV files on user activity on the app.
+
+## The data is included in the event_data folder and it includes user activity on the app associated with the music the user played, etc.
+
+## All the analysis and etl is included in the jupyter notebook, where the data is read from event_data, transofrmed and loaded to their corresponding tables to be queryed and analyzed. The jupyter notebook explains every step using markdown cells. To run the analysis, just open the jupyter notebook and press run all cells.
