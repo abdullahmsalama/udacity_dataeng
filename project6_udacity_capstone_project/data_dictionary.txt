@@ -1,0 +1,46 @@
+Data Dictionary
+
+"immigration_fact" table:
+
+- cicid (primary key): A unique identifier of trip and traveller (int)
+- arrival_date: the arrival date of trip (datetime)
+- immig_country_birth: the immigrant country of birth (str)
+- immig_country_residence: the immigration country of residence (str)
+- arrival_usa_state_alpha_code: the arrival us state (alpha code ex: "FL" for Florida) (str)
+- visa_type: The visa type of traveller, whether Leisure, Business or Study (str)
+- visa_category: More depth categories like B1, B2 visas representing short-term, long-term, asylym etc (str)
+
+Now comes the dimension tables, starting with "country_monthly_temperature_dim", which will include monthly average temperature of each country (to be used in relation to departure countries temperature). It links to the fact table through the country in the dimension table and through residence and birth countries in the fact table. 
+
+"country_monthly_temperature_dim" table includes these columns:
+
+- country (str)
+- month (int)
+- average_temperature (double)
+- - primary keys (country, month)
+
+Also, "us_state_monthly_temperature_dim" which has the same purpose as the previous but was detached due to non-unqiue naming of cities between different us states. Links to the fact table via state. 
+
+ "us_state_monthly_temperature_dim" columns are:
+
+- state_alpha_code (str) (example: "FL")
+- month (int)
+- average_temperature (double)
+- - primary keys (state, month)
+
+"usa_states_dim" dervied from the demographics is also important and links to the fact table via state code.
+
+"usa_states_dim" columnns are:
+
+- state_alpha_code (primary key) (str) (example: "FL")
+- state (str) (related example: "Florida")
+
+Finally, "arrival_dates_dim", which links to the fact table via arrival_date, and the columns are:
+
+- date (primary key) (datetime)
+- year (int)
+- month (int)
+- week (int)
+- day (int)
+- day_of_week (str - dayname)
+- season (str)
