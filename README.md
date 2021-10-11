@@ -7,5 +7,5 @@ This repo contains the projects I developed as a part of the Udacity Data Engine
 2- Data Modeling with Apache Cassandra.<br />
 3- Data Warehousing.<br />
 4- Data Lakes & Spark.<br />
-5- Data Pipelines with Airflow.
-6- Capstone Project
+5- Data Pipelines with Airflow.<br />
+6- Capstone Project.
